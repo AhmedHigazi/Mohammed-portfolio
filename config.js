@@ -32,7 +32,7 @@ function getPortfolioCloudUrl() {
 
   // 2. Check if user configured custom credentials inside Admin UI (localStorage)
   try {
-    const saved = localStorage.getItem('portfolio_firebase_config');
+    const saved = localStorage.getItem('asbah_portfolio_firebase_config');
     if (saved) {
       const cfg = JSON.parse(saved);
       if (cfg.projectId && cfg.apiKey) {
@@ -49,7 +49,7 @@ function getPortfolioCloudUrl() {
  */
 function getPortfolioAdminPin() {
   try {
-    const customPin = localStorage.getItem('portfolio_custom_pin');
+    const customPin = localStorage.getItem('asbah_portfolio_custom_pin');
     if (customPin && customPin.trim().length > 0) {
       return customPin.trim();
     }
